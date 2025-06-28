@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
+import CustomCursor from "./components/effects/CustomCursor";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const instrumentSans = Instrument_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-instrument-sans',
 });
 
 export const metadata: Metadata = {
@@ -23,12 +21,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+
+    <html lang="en"
+      className={`${instrumentSans.variable} antialiased`}
       >
+      <body
+        className={`${instrumentSans.variable} antialiased`}
+        >
+        <Navbar/>
+        <CustomCursor/>
         {children}
       </body>
     </html>
   );
 }
+
