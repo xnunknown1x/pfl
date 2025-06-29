@@ -119,4 +119,7 @@
         align-items: center;
         padding: 20px;
     }
+    .viewer{
+        display: none;
+    }
 }

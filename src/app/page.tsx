@@ -26,7 +26,7 @@ export default function Home() {
       </FadeIn>
       <div className="inset-0 z-0" style={{position:"absolute"}}>
         <Suspense >
-            <Canvas>
+            <Canvas className="viewer">
               <CoinChain path="/models/Coins.glb" scale={1.0} position={[0.3, 0, 2]} />
             </Canvas>
         </Suspense>
