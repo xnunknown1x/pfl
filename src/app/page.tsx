@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import "./lp.css"
 import CustomCursor from "./components/effects/CustomCursor";
 import WHR from "./components/effects/WordsHoverRepel";
@@ -8,6 +8,7 @@ import GLBViewer from "./components/3dviewer/GLBViewer";
 import CoinChain from "./components/coins";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
+import Projects from "./components/projects";
 export default function Home() {
   return (
   <>
@@ -41,7 +42,7 @@ export default function Home() {
           </FadeIn>
         </h3>
       </div>
-      <div>
+      <div> 
         <FadeIn>
           <GLBViewer
           path="/models/perfume.glb"
@@ -53,6 +54,7 @@ export default function Home() {
           {/* <h3 style={{color:"black", justifyContent:"center", alignItems:"center"}}>Hehe</h3> */}
       </FadeIn>
       </div>
+      <Projects></Projects>
       <div>
         <Skills/>
       </div>
