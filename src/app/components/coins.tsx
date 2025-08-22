@@ -63,7 +63,6 @@ export default function CoinChain({
         {coins.map((name) => {
           const node = scene.getObjectByName(name) as THREE.Mesh;
           if (!node) return null;
-
           return (
             <primitive
               key={name}
