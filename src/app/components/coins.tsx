@@ -80,20 +80,12 @@ export default function CoinChain({
       </group>
 
       {/* ✨ Postprocessing Effects */}
-      <EffectComposer>
         <Bloom
           intensity={0.01}
           luminanceThreshold={0.3}
           luminanceSmoothing={0.8}
           mipmapBlur
         />
-        <DepthOfField
-          focusDistance={0}
-          focalLength={0.002}
-          bokehScale={10}
-          target={focusPoint}
-        />
-      </EffectComposer>
     </>
   );
 }
