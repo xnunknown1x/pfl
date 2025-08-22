@@ -2,7 +2,6 @@
 import { useGLTF } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import { EffectComposer, Bloom, DepthOfField } from "@react-three/postprocessing";
 import * as THREE from "three";
 
 interface CoinChainProps {
@@ -78,14 +77,7 @@ export default function CoinChain({
           );
         })}
       </group>
-
       {/* ✨ Postprocessing Effects */}
-        <Bloom
-          intensity={0.01}
-          luminanceThreshold={0.3}
-          luminanceSmoothing={0.8}
-          mipmapBlur
-        />
     </>
   );
 }
